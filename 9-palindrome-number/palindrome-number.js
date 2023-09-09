@@ -3,13 +3,13 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    if(x<0) return false
-    var str = x.toString();
-    var reverseString = str.split('').reverse().join('');
-    
-    //+reverseString converts string to number
-    if(+reverseString === x)
-        return true
-    else
-        return false
+    var str = x.toString()
+    let i = 0;
+    let j = str.length-1;
+    while(i<j){
+        if(str[i] !== str[j]) return false;
+        i++;
+        j--;
+    }
+    return true
 };
