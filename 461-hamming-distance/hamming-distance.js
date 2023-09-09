@@ -9,7 +9,6 @@ var hammingDistance = function(x, y) {
 
     while(str1InBin.length !== str2InBin.length){
         if(str1InBin.length < str2InBin.length){
-            
             str1InBin = '0'+str1InBin
         }
         else if(str2InBin.length < str1InBin.length) {
@@ -24,3 +23,4 @@ var hammingDistance = function(x, y) {
     }
     return distance;
 };
+
