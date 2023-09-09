@@ -7,6 +7,10 @@ var isAnagram = function(s, t) {
     if(s.length !== t.length){
         return false
     }
-    let isAnagram = s.split('').sort().join('') === t.split('').sort().join('') ? true : false;
+    let isAnagram = checkAnagram(s) === checkAnagram(t) ? true : false;
     return isAnagram
 };
+
+function checkAnagram(str){
+    return str.split('').sort().join('')
+}
